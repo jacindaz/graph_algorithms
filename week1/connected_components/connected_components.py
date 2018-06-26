@@ -30,10 +30,10 @@ def explore(adj, node_index, visited):
     for current_adj_node in adjacent_nodes:
         current_node_visited = visited[current_adj_node]
 
-        print("------------")
-        print(f"current_adj_node: {current_adj_node}")
-        print(f"visited: {visited}")
-        print(f"current_node_visited: {current_node_visited}")
+        # print("------------")
+        # print(f"current_adj_node: {current_adj_node}")
+        # print(f"visited: {visited}")
+        # print(f"current_node_visited: {current_node_visited}")
         if not current_node_visited:
             explore(adj, current_adj_node, visited)
 
@@ -59,5 +59,4 @@ if __name__ == '__main__':
         adj[a - 1].append(b - 1)
         adj[b - 1].append(a - 1)
 
-    print(adj)
     print(number_of_components(adj))
